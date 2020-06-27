@@ -1,0 +1,161 @@
+#expertise{
+  min-height:100vh;
+  display:flex;
+  flex-direction: column;
+  padding:150px 20px;
+  width:100%;
+  max-width:100%;
+  background-color: #fff;
+  color: #212529;
+  #expertise-grid{
+    display:flex;
+    flex-direction: column;
+
+    h2{
+      font-size: 40px;
+      margin-top: -25px;
+      margin-bottom: 40px;
+      width:100%;
+      text-align:center;
+    }
+
+    .skillset-heading{
+      font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #212529;
+      font-weight: 700;
+      text-align:left;
+    }
+    
+    .expertise-piece{
+      width:100%;
+      text-align:center;
+      margin-top:30px;
+      padding:0 20px;
+      h5{
+        margin: 15px 0;
+        font-size:1.5rem;
+        font-weight: 700;
+      }
+      .expertise-links{
+        display:flex;
+        flex-direction:column;
+
+        .btn {
+          margin-bottom: 16px;
+          cursor: pointer;
+          font-weight:700;
+          color: #fff;
+          background-color: #17a2b8;
+          border-color: #17a2b8;
+          display: inline-block;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: middle;
+          user-select: none;
+          border: 1px solid transparent;
+          padding: .375rem .75rem;
+          font-size: 1rem;
+          line-height: 1.5;
+          border-radius: .25rem;
+          transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+          text-decoration: none;
+        }
+      }
+      .btn:hover{
+        background-color: #117a8b;
+        border-color: #10707f;
+      }
+      .expertise-icons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        img{
+          margin-left: 4px;
+          margin-right: 4px;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+
+/*  Tool Tips Start  */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 175px;
+  background-color: #212529;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -88px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #212529 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*   Tool Tips End   */
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+  #expertise{
+  #expertise-grid{
+    .expertise-piece{
+      display: flex;
+      width: 80%;
+      margin:0 auto;
+      flex-direction: column;
+      padding:15px;
+      .expertise-piece{
+        .btn:nth-of-type(1){
+          margin-right:20px;
+        }
+      }
+    }
+  }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #expertise{
+    #expertise-grid{
+      max-width:1140px;
+      margin:0 auto;
+      flex-wrap: wrap;
+      flex-direction: row;
+      .expertise-piece{
+        width: 33%;
+      }
+    }
+  }
+}

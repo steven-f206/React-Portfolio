@@ -1,0 +1,106 @@
+#portfolio{
+  min-height:100vh;
+  display:flex;
+  flex-direction: column;
+  padding:150px 20px;
+  width:100%;
+  max-width:100%;
+  background-color: #4c5864;
+  color:white;
+  #portfolio-grid{
+    display:flex;
+    flex-direction: column;
+
+    h2{
+      font-size: 40px;
+      margin-top: -25px;
+      margin-bottom: 40px;
+      width:100%;
+      text-align:center;
+    }
+    
+    .portfolio-piece{
+      width:100%;
+      margin-top:25px;
+      h4{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+      .portfolio-links{
+        display:flex;
+        flex-direction:column;
+
+        .btn {
+          margin-bottom: 16px;
+          cursor: pointer;
+          font-weight:700;
+          color: #fff;
+          background-color: #17a2b8;
+          border-color: #17a2b8;
+          display: inline-block;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: middle;
+          user-select: none;
+          border: 1px solid transparent;
+          padding: .375rem .75rem;
+          font-size: 1rem;
+          line-height: 1.5;
+          border-radius: .25rem;
+          transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+          text-decoration: none;
+        }
+      }
+      .btn:hover{
+        background-color: #117a8b;
+        border-color: #10707f;
+      }
+      img{
+        width:90%;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+
+  #portfolio{
+
+  #portfolio-grid{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #portfolio-grid{
+    .portfolio-piece{
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      padding:15px;
+      div img{
+        width:90%;
+      }
+      .portfolio-links{
+        flex-direction:row;
+        .btn:nth-of-type(1){
+          margin-right:20px;
+        }
+      }
+    }
+  }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #portfolio{
+    #portfolio-grid{
+      max-width:1140px;
+      margin:0 auto;
+      .portfolio-piece{
+        width: 33%;
+      }
+    }
+  }
+}
